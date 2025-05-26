@@ -1,1 +1,150 @@
-/* место для вашего кода */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100;
+    height: 293;
+
+}
+
+.navigation {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 15px;
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+    height: 98px;
+    flex-wrap: wrap;
+}
+
+.main {
+    display: flex;
+}
+
+/* Основной блок с фоновым изображением */
+.cover {
+    position: relative;
+    background-image: url('../images/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    width: 1100px;
+    height: 757px;
+}
+
+/* Полупрозрачный слой (overlay) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Убедитесь, что содержимое находится поверх overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    gap: 50px; /* Отступ между заголовком и описанием */
+}
+
+.title {
+    display: flex;
+    flex-direction: column; /* Размещаем строки одну под другой */
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 115%;
+    letter-spacing: 30%;
+    text-transform: uppercase;
+    width: 1100px; /* Занимает всю доступную ширину */
+    padding:20px;
+}
+
+.first-line {
+    text-align: left;
+}
+
+.second-line {
+    text-align: center;
+}
+
+.third-line {
+    text-align: right;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Занимает всю доступную ширину контейнера */
+    max-width: 1000px; /* Максимальная ширина */
+}
+
+.description p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18px; /* Уменьшаем размер текста */
+    line-height: 28px;
+    letter-spacing: 0.3em; /* 90% межбуквенного интервала */
+    text-transform: uppercase;
+    max-width: 637px; /* Максимальная ширина */
+     margin-right: 20px; /* Дополнительный отступ справа */
+}
+
+.act-button {
+    padding: 10px 20px; /* Добавляем внутренние отступы */
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 18px; /* Уменьшаем размер текста */
+    color: white;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 256px;
+}
+
+.act-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.lots {
+    display: flex;
+}
+
+.about {
+    display: flex;
+}
+
+.footer {
+    display: flex;
+}
