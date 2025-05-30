@@ -1,27 +1,55 @@
 .header {
+    position: relative; /* Необходимо для абсолютного позиционирования */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100;
-    height: 293;
-
-}
-
-.navigation {
-    display: flex;
-    padding: 10px 20px;
+    max-width: 1100px;
+    height: 293px;
 }
 
 .menu {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
 }
 
-.menu-item {
+.menu ul {
+    list-style: none; /* Убираем стандартные маркеры */
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-around;
-    margin: 0 15px;
 }
+
+.menu li {
+    position: relative; /* Необходимо для позиционирования псевдоэлементов */
+    margin: 0 20px; /* Отступы между пунктами меню */
+}
+
+.menu li:not(:first-child)::before {
+    content: ""; /* Создаем псевдоэлемент */
+    position: absolute;
+    left: -15px; /* Сдвигаем маркер влево */
+    top: 50%;
+    transform: translateY(-50%); /* Центрируем по вертикали */
+    width: 8px; /* Ширина круга */
+    height: 8px; /* Высота круга */
+    border-radius: 50%; /* Делаем круглым */
+    background-color: #ccc; /* Цвет круга */
+    border: 1px solid black; /* Черная граница */
+}
+
+.menu li:first-child a {
+    text-decoration: none; /* Убираем подчеркивание у первого элемента */
+}
+ 
+.menu li a {
+    color: #333; /* Цвет текста */
+    font-family: 'Raleway', sans-serif; /* Шрифт */
+    font-weight: 400; /* Толщина шрифта */
+    font-size: 18px; /* Размер шрифта */
+    line-height: 100%; /* Высота строки */
+    letter-spacing: 0%; /* Межбуквенный интервал */
+}
+
 .address {
     display: flex;
     flex-direction: column;
@@ -30,8 +58,21 @@
     flex-wrap: wrap;
 }
 
+.logo {
+    position: absolute; /* Абсолютное позиционирование */
+    left: 50%; /* Сдвигаем на 50% ширины родителя */
+    /* transform: translateX(-50%); /* Корректируем положение */
+    top: 50%; /* Сдвигаем на 50% высоты родителя */
+    transform: translate(-50%, -50%); /* Корректируем положение по вертикали и горизонтали */
+}
+
 .main {
     display: flex;
+    flex-direction: column;
+    justify-content: column;
+    align-items: center;
+    max-width: 1100px;
+    height: 757px;
 }
 
 /* Основной блок с фоновым изображением */
@@ -48,6 +89,7 @@
     text-align: center;
     width: 1100px;
     height: 757px;
+    margin-bottom: 50px;
 }
 
 /* Полупрозрачный слой (overlay) */
@@ -63,10 +105,10 @@
 
 .content {
     position: relative;
-    z-index: 2; /* Убедитесь, что содержимое находится поверх overlay */
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: space-between;
     align-items: center;
     gap: 50px; /* Отступ между заголовком и описанием */
 }
@@ -111,8 +153,8 @@
     line-height: 28px;
     letter-spacing: 0.3em; /* 90% межбуквенного интервала */
     text-transform: uppercase;
-    max-width: 637px; /* Максимальная ширина */
-     margin-right: 20px; /* Дополнительный отступ справа */
+    max-width: 660px; /* Максимальная ширина */
+    margin-right: 0px; /* Дополнительный отступ справа */
 }
 
 .act-button {
@@ -138,13 +180,219 @@
 }
 
 .lots {
+    top: 1230px;
+    height: 723px;
     display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+h2 {
+font-family: Raleway;
+font-weight: 700;
+font-size: 40px;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: uppercase;
+}
+
+.cards {
+    display: flex;
+    justify-content: center; /* Распределяет карточки равномерно */
+    align-items: center;
+    width: 100%;
+    max-width: 1100px; /* Ограничение максимальной ширины */
+    gap: 20px; /* Межэлементные отступы */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0; /* Убираем лишние отступы */
+    list-style: none; /* Убираем маркеры списка */
+}
+
+.card1 {
+    position: relative;
+}
+
+.card2 {
+    background-image: url('../images/card-lot-02.jpg');
+}
+
+.card3 {
+    background-image: url('../images/card-lot-03.jpg');
+}
+article {
+    position: relative;
+    background-image: url('../images/card-lot-01.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 334px; /* Соответствует flex-basis */
+    height: 596px; /* Высота карточки */
+}
+
+.card-head {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    color: #FFFFFF;
+    position: relative;
+    width: 254px; /* Соответствует flex-basis */
+    top: 48px; /* Отступ от края карточки */
+    left: 40px; /* Отступ от края карточки */
+    z-index: 2;
+}
+
+.card-text {
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 48px; /* Отступ от края карточки */
+    width: 254px; /* Соответствует flex-basis */
+    left: 40px; /* Отступ от края карточки */
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.additional_text {
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    position: relative;
+    left: 80px;
+
 }
 
 .about {
+    margin-bottom: 50px;
+    margin-left: 24px;
+    position: relative; /* Относительное позиционирование */
+    height: 595px;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Выравниваем по верхней границе */
 }
+
+.logo_bottom {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: #000000;
+    top: 35px;
+    left: 47px;
+}
+
+.text-container {
+    position: relative;
+    top: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Выравниваем по верхней границе */
+    align-items: start;
+    width: 693px;
+    height: 449px;
+    margin-left: 60px;
+}
+
+.description_text {
+    position:relative;
+    top:150px;
+    height: 312px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0%;
+
+}
+
+
 
 .footer {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu_bottom {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    justify-content: center; /* Выравнивание по вертикали */
+    align-items: center; /* Выравнивание по горизонтали */
+    width: 240px;
+    height: 48px;
+}
+
+.menu_bottom ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.menu_bottom li {
+    position: relative; /* Для добавления линий */
+    margin: 5px 0; /* Отступ между элементами */
+}
+
+.menu_bottom li::after {
+    content: ""; /* Создаём псевдоэлемент */
+    position: absolute;
+    bottom: -5px; /* Позиционируем линию под текстом */
+    left: 50%; /* Центрируем линию */
+    transform: translateX(-50%); /* Корректируем положение линии */
+    width: 80%; /* Ширина линии */
+    height: 1px; /* Толщина линии */
+    background-color: #ccc; /* Цвет линии */
+}
+
+.menu_bottom a {
+font-family: Raleway;
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+}
+
+.social {
+    display: flex;
+    width: 240px;
+    height: 48px;
+}
+
+img .social_svg {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
 }
