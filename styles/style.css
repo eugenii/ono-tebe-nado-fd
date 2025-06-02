@@ -3,7 +3,7 @@
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-    max-width: 100%;
+    max-width: 1100px;
     height: 293px;
 }
 
@@ -208,7 +208,7 @@
     justify-content: space-between;
     align-items: start;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 1100px;
     margin-bottom: 50px;
 }
 
@@ -318,7 +318,7 @@ article {
     margin-left: 24px;
     position: relative; /* Относительное позиционирование */
     height: 595px;
-    width: 100%;
+    max-width: 1100px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start; /* Выравниваем по верхней границе */
@@ -383,7 +383,7 @@ article {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    max-width: 1100px;
 }
 
 .address-bottom {
