@@ -1,39 +1,41 @@
 .header {
     position: relative; /* Необходимо для абсолютного позиционирования */
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     max-width: 100%;
     height: 293px;
 }
 
 .menu {
+    position: relative;
     display: flex;
     align-items: center;
+    left: 30px;
 }
 
 .menu ul {
     list-style: none; /* Убираем стандартные маркеры */
     margin: 0;
-    padding: 0;
+    padding: 3px;
     display: flex;
 }
 
 .menu li {
     position: relative; /* Необходимо для позиционирования псевдоэлементов */
-    margin: 0 20px; /* Отступы между пунктами меню */
+    margin: 0 17px; /* Отступы между пунктами меню */
 }
 
 .menu li:not(:first-child)::before {
     content: ""; /* Создаем псевдоэлемент */
     position: absolute;
-    left: -15px; /* Сдвигаем маркер влево */
+    left: -20px; /* Сдвигаем маркер влево */
     top: 50%;
     transform: translateY(-50%); /* Центрируем по вертикали */
-    width: 8px; /* Ширина круга */
-    height: 8px; /* Высота круга */
+    width: 6px; /* Ширина круга */
+    height: 6px; /* Высота круга */
     border-radius: 50%; /* Делаем круглым */
-    background-color: #ccc; /* Цвет круга */
+    background-color: #fff; /* Цвет круга */
     border: 1px solid black; /* Черная граница */
 }
 
@@ -50,29 +52,35 @@
     letter-spacing: 0%; /* Межбуквенный интервал */
 }
 
+
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    left: 48px;
+}
+
+
 .address {
+    position: relative;
+    margin-left: 230px;
     display: flex;
     flex-direction: column;
     max-width: 240px;
     height: 98px;
     flex-wrap: wrap;
-}
-
-.logo {
-    position: absolute; /* Абсолютное позиционирование */
-    left: 50%; /* Сдвигаем на 50% ширины родителя */
-    /* transform: translateX(-50%); /* Корректируем положение */
-    top: 50%; /* Сдвигаем на 50% высоты родителя */
-    transform: translate(-50%, -50%); /* Корректируем положение по вертикали и горизонтали */
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24.3px;
+    letter-spacing: 0.02em;
+    font-style: normal !important;
 }
 
 .main {
     display: flex;
-    flex-direction: column;
-    justify-content: column;
-    align-items: center;
-    max-width: 100%;
-    height: 757px;
+    flex-direction: column;  /* Дети выстраиваются вертикально */
+    height: auto;           /* Высота будет равна сумме детей */
 }
 
 /* Основной блок с фоновым изображением */
@@ -83,7 +91,7 @@
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     color: white;
     text-align: center;
@@ -116,42 +124,52 @@
 .title {
     display: flex;
     flex-direction: column; /* Размещаем строки одну под другой */
+    justify-content: space-between;
     font-family: Raleway;
     font-weight: 700;
     font-size: 100px;
     line-height: 115%;
-    letter-spacing: 30%;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     width: 1100px; /* Занимает всю доступную ширину */
+    height: 385px;
     padding:20px;
 }
 
 .first-line {
     text-align: left;
+    padding: 12px;
+    padding-left: 29px;
 }
 
 .second-line {
     text-align: center;
+    padding-top: 7px;
+    padding-left: 27px;
 }
 
 .third-line {
     text-align: right;
+    padding-top:20px;
 }
 
 .description {
+    position: relative;
+    top: 88px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%; /* Занимает всю доступную ширину контейнера */
     max-width: 1000px; /* Максимальная ширина */
+    height: 51px;
 }
 
-.description p {
+.description-text {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 18px; /* Уменьшаем размер текста */
     line-height: 28px;
-    letter-spacing: 0.3em; /* 90% межбуквенного интервала */
+    letter-spacing: 0.28em; /* 90% межбуквенного интервала */
     text-transform: uppercase;
     max-width: 660px; /* Максимальная ширина */
     margin-right: 0px; /* Дополнительный отступ справа */
@@ -164,7 +182,7 @@
     font-size: 18px; /* Уменьшаем размер текста */
     color: white;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0.21em;
     text-align: center;
     text-transform: uppercase;
     background-color: transparent;
@@ -172,6 +190,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 256px;
+    height: 51px;
 }
 
 .act-button:hover {
@@ -180,35 +199,42 @@
 }
 
 .lots {
-    top: 1230px;
+    position: relative;
+    margin-top: 129px;
+    margin-left: 24px;
+    margin-right: 24px;
     height: 723px;
     display: flex;
     justify-content: space-between;
     align-items: start;
     flex-direction: column;
-    width: 100%;
+    max-width: 100%;
     margin-bottom: 50px;
 }
 
-h2 {
-font-family: Raleway;
-font-weight: 700;
-font-size: 40px;
-line-height: 100%;
-letter-spacing: 0%;
-text-transform: uppercase;
+.lots-head {
+    position:relative;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    margin-left: 40px;
+    margin-top: 4px;
 }
 
 .cards {
     display: flex;
-    justify-content: center; /* Распределяет карточки равномерно */
+    justify-content: space-between; /* Распределяет карточки равномерно */
     align-items: center;
     width: 100%;
     max-width: 100%; /* Ограничение максимальной ширины */
-    gap: 20px; /* Межэлементные отступы */
+    /* gap: 20px; Межэлементные отступы */
 }
 
 .card {
+    width: 334px; /* Соответствует flex-basis */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -219,14 +245,17 @@ text-transform: uppercase;
 
 .card1 {
     position: relative;
+    
 }
 
 .card2 {
     background-image: url('../images/card-lot-02.jpg');
+    /* margin-left: -46px; */
 }
 
 .card3 {
     background-image: url('../images/card-lot-03.jpg');
+    
 }
 article {
     position: relative;
@@ -260,8 +289,8 @@ article {
     font-family: Raleway;
     font-weight: 400;
     font-size: 18px;
-    line-height: 120%;
-    letter-spacing: 0%;
+    line-height: 133%;
+    letter-spacing: 0.06em;
     color: #FFFFFF;
     position: absolute;
     bottom: 48px; /* Отступ от края карточки */
@@ -279,12 +308,13 @@ article {
     line-height: 100%;
     letter-spacing: 0%;
     position: relative;
-    left: 80px;
+    margin-left: 40px;
 
 }
 
 .about {
     margin-bottom: 50px;
+    margin-top: 72px;
     margin-left: 24px;
     position: relative; /* Относительное позиционирование */
     height: 595px;
@@ -319,10 +349,23 @@ article {
     margin-left: 60px;
 }
 
-.description_text {
+.about-head {
     position:relative;
-    top:150px;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    margin-left: -49px;
+    margin-top: 10px;
+}
+.description_text {
+    display: flex;
+    margin-top: 102px;
+    margin-left: -47px;
     height: 312px;
+    width: 690px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -331,10 +374,11 @@ article {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0%;
-
 }
 
-
+.shift-down {
+  margin-top: 23px; /* Или position: relative; top: 50px; */
+}
 
 .footer {
     display: flex;
@@ -343,12 +387,21 @@ article {
     width: 100%;
 }
 
+.address-bottom {
+    margin-left: 50px;
+    margin-top: 130px;
+    max-width: 300px;
+    letter-spacing: 0.01em;
+    font-style: normal !important;
+}
 .menu_bottom {
     display: flex;
+    margin-top: 75px;
+    margin-left: -40px;
     flex-direction: column; /* Вертикальное расположение */
-    justify-content: center; /* Выравнивание по вертикали */
+    justify-content: space-between; /* Выравнивание по вертикали */
     align-items: center; /* Выравнивание по горизонтали */
-    width: 240px;
+    width: 164px;
     height: 48px;
 }
 
@@ -386,7 +439,9 @@ text-align: center;
 
 .social {
     display: flex;
-    width: 240px;
+    margin-right: 32px;
+    margin-top: 80px;
+    width: 280px;
     height: 48px;
 }
 
