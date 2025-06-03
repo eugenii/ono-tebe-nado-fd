@@ -1,17 +1,16 @@
 .header {
     position: relative; /* Необходимо для абсолютного позиционирования */
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     max-width: 1100px;
-    height: 293px;
+    margin-top: 93px;
 }
 
 .menu {
     position: relative;
     display: flex;
     align-items: center;
-    left: 30px;
+    margin-left: 30px;
 }
 
 .menu ul {
@@ -23,7 +22,7 @@
 
 .menu li {
     position: relative; /* Необходимо для позиционирования псевдоэлементов */
-    margin: 0 17px; /* Отступы между пунктами меню */
+    margin: 0 18px; /* Отступы между пунктами меню */
 }
 
 .menu li:not(:first-child)::before {
@@ -39,17 +38,16 @@
     border: 1px solid black; /* Черная граница */
 }
 
-.menu li:first-child a {
-    text-decoration: none; /* Убираем подчеркивание у первого элемента */
+.first-item a {
+  text-decoration: none; /* Убираем подчеркивание у первого элемента */
 }
- 
-.menu li a {
+
+.item {
     color: #333; /* Цвет текста */
     font-family: 'Raleway', sans-serif; /* Шрифт */
     font-weight: 400; /* Толщина шрифта */
     font-size: 18px; /* Размер шрифта */
     line-height: 100%; /* Высота строки */
-    letter-spacing: 0%; /* Межбуквенный интервал */
 }
 
 
@@ -57,24 +55,23 @@
     position: relative;
     display: flex;
     align-items: center;
-    left: 48px;
+    margin-left: 20px;
 }
 
 
 .address {
     position: relative;
-    margin-left: 230px;
+    margin-left: 185px;
     display: flex;
     flex-direction: column;
     max-width: 240px;
-    height: 98px;
     flex-wrap: wrap;
     font-family: Raleway;
     font-weight: 400;
     font-size: 18px;
     line-height: 24.3px;
     letter-spacing: 0.02em;
-    font-style: normal !important;
+    font-style: normal;
 }
 
 .main {
@@ -96,15 +93,15 @@
     color: white;
     text-align: center;
     width: 1100px;
-    height: 757px;
+    min-height: 757px;
     margin-bottom: 50px;
+    margin-top: 95px;
 }
 
 /* Полупрозрачный слой (overlay) */
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
+ inset: 0; 
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -112,86 +109,87 @@
 }
 
 .content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px; /* Отступ между заголовком и описанием */
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение блоков */
+  align-items: center; /* Горизонтальное выравнивание по центру */
+  justify-content: center; /* Вертикальное выравнивание по центру */
+  height: 100vh; /* Занимает всю высоту экрана */
+  background-image: url('background.jpg'); /* Предполагаемый фон */
+  background-size: cover;
+  background-position: center;
 }
 
+/* Блок с заголовком */
 .title {
     display: flex;
-    flex-direction: column; /* Размещаем строки одну под другой */
-    justify-content: space-between;
-    font-family: Raleway;
+    flex-direction: column; /* Вертикальное расположение строк */
+    justify-content: space-between; /* Распределяет строки равномерно */
+    font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 100px;
     line-height: 115%;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    width: 1100px; /* Занимает всю доступную ширину */
-    height: 385px;
-    padding:20px;
+    width: 1100px; /* Ширина контейнера */
+    padding: 133px 20px 10px 18px; /* Внутренние отступы */
+    margin-top: -50px; /* Поднимаем заголовок на 50 пикселей */
+    text-align: center; /* По умолчанию все строки по центру */
+    text-transform: uppercase;
 }
 
-.first-line {
-    text-align: left;
-    padding: 12px;
-    padding-left: 29px;
+.ono-line {
+    text-align: left; /* Левое выравнивание первой строки */
+    margin-top: 10px;
+
 }
 
-.second-line {
-    text-align: center;
-    padding-top: 7px;
-    padding-left: 27px;
+.tebe-line {
+    text-align: center; /* Центральное выравнивание второй строки */
+    margin-top: 30px;
 }
 
-.third-line {
-    text-align: right;
-    padding-top:20px;
+.nado-line {
+    text-align: right; /* Правое выравнивание третьей строки */
+    margin-top: 30px;
 }
 
+/* Блок с описанием и кнопкой */
 .description {
-    position: relative;
-    top: 88px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; /* Занимает всю доступную ширину контейнера */
-    max-width: 1000px; /* Максимальная ширина */
-    height: 51px;
+  display: flex;
+  justify-content: space-between; /* Размещает элементы по краям */
+  align-items: center; /* Выравнивает элементы по вертикали */
+  width: 100%; /* Занимает всю доступную ширину */
+  max-width: 1000px; /* Максимальная ширина */
+  margin-top: 100px; /* Увеличиваем отступ сверху */
 }
 
 .description-text {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 18px; /* Уменьшаем размер текста */
-    line-height: 28px;
-    letter-spacing: 0.28em; /* 90% межбуквенного интервала */
-    text-transform: uppercase;
-    max-width: 660px; /* Максимальная ширина */
-    margin-right: 0px; /* Дополнительный отступ справа */
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  word-spacing: 1.3em;
+  text-transform: uppercase;
+  max-width: 660px;
 }
 
 .act-button {
-    padding: 10px 20px; /* Добавляем внутренние отступы */
-    font-family: Raleway;
-    font-weight: 500;
-    font-size: 18px; /* Уменьшаем размер текста */
-    color: white;
-    line-height: 100%;
-    letter-spacing: 0.21em;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: transparent;
-    border: 2px solid white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 256px;
-    height: 51px;
+  padding: 10px 20px;
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 256px;
+  height: 51px;
 }
+
 
 .act-button:hover {
     background-color: white;
@@ -200,10 +198,9 @@
 
 .lots {
     position: relative;
-    margin-top: 129px;
+    margin-top: 130px;
     margin-left: 24px;
     margin-right: 24px;
-    height: 723px;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -214,11 +211,10 @@
 
 .lots-head {
     position:relative;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 40px;
     line-height: 100%;
-    letter-spacing: 0%;
     text-transform: uppercase;
     margin-left: 40px;
     margin-top: 4px;
@@ -230,7 +226,9 @@
     align-items: center;
     width: 100%;
     max-width: 100%; /* Ограничение максимальной ширины */
-    /* gap: 20px; Межэлементные отступы */
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px; /* Межэлементные отступы */
 }
 
 .card {
@@ -244,35 +242,33 @@
 }
 
 .card1 {
-    position: relative;
-    
+    background-image: url('../images/card-lot-01.jpg');
 }
 
 .card2 {
     background-image: url('../images/card-lot-02.jpg');
-    /* margin-left: -46px; */
 }
 
 .card3 {
     background-image: url('../images/card-lot-03.jpg');
-    
 }
 article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
-    background-image: url('../images/card-lot-01.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 334px; /* Соответствует flex-basis */
-    height: 596px; /* Высота карточки */
+    min-height: 596px; /* Высота карточки */
 }
 
 .card-head {
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 22px;
     line-height: 120%;
-    letter-spacing: 0%;
     text-transform: uppercase;
     text-decoration: underline;
     text-decoration-style: solid;
@@ -286,13 +282,13 @@ article {
 }
 
 .card-text {
-    font-family: Raleway;
+    position: relative;
+    font-family: Raleway, sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 133%;
     letter-spacing: 0.06em;
     color: #FFFFFF;
-    position: absolute;
     bottom: 48px; /* Отступ от края карточки */
     width: 254px; /* Соответствует flex-basis */
     left: 40px; /* Отступ от края карточки */
@@ -302,13 +298,13 @@ article {
 }
 
 .additional_text {
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
-    letter-spacing: 0%;
     position: relative;
     margin-left: 40px;
+    margin-top: 33px;
 
 }
 
@@ -317,7 +313,7 @@ article {
     margin-top: 72px;
     margin-left: 24px;
     position: relative; /* Относительное позиционирование */
-    height: 595px;
+    min-height: 595px;
     max-width: 1100px;
     display: flex;
     justify-content: space-between;
@@ -333,8 +329,8 @@ article {
     height: 240px;
     border-radius: 50%;
     background-color: #000000;
-    top: 35px;
-    left: 47px;
+    margin-top: 35px;
+    margin-left: 47px;
 }
 
 .text-container {
@@ -345,17 +341,16 @@ article {
     justify-content: flex-start; /* Выравниваем по верхней границе */
     align-items: start;
     width: 693px;
-    height: 449px;
+    min-height: 449px;
     margin-left: 60px;
 }
 
 .about-head {
     position:relative;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 40px;
     line-height: 100%;
-    letter-spacing: 0%;
     text-transform: uppercase;
     margin-left: -25px;
     margin-top: 10px;
@@ -373,6 +368,7 @@ article {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0%;
+    gap: 20px;
 }
 
 .shift-down {
@@ -391,7 +387,7 @@ article {
     margin-top: 130px;
     max-width: 300px;
     letter-spacing: 0.01em;
-    font-style: normal !important;
+    font-style: normal;
 }
 .menu_bottom {
     display: flex;
@@ -401,7 +397,7 @@ article {
     justify-content: space-between; /* Выравнивание по вертикали */
     align-items: center; /* Выравнивание по горизонтали */
     width: 164px;
-    height: 48px;
+    min-height: 48px;
 }
 
 .menu_bottom ul {
@@ -409,6 +405,7 @@ article {
     padding: 0;
     margin: 0;
     text-align: center; /* Выравнивание текста по центру */
+    margin-top: 20px;
 }
 
 .menu_bottom li {
@@ -428,25 +425,36 @@ article {
 }
 
 .menu_bottom a {
-font-family: Raleway;
+font-family: Raleway, sans-serif;
 font-weight: 400;
 font-size: 18px;
 line-height: 100%;
-letter-spacing: 0%;
 text-align: center;
+}
+
+.logo-bottom {
+    width: auto;
+    max-width: 146px;
+    height: auto;
 }
 
 .social {
     display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
     margin-right: 32px;
     margin-top: 80px;
-    width: 280px;
-    height: 48px;
+    min-width: 240px;
+    max-height: 48px;
+    min-height: 48px;
+    list-style: none;
 }
 
-img .social_svg {
+.social_svg {
     display: flex;
     justify-content: space-between;
-    width: auto;
-    height: auto;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
