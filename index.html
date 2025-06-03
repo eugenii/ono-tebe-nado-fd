@@ -13,12 +13,12 @@
     <header class="header">
       <nav class="menu">
           <ul>
-              <li><a href="#">главная</a></li>
-              <li><a href="#">посмотреть лоты</a></li>
-              <li><a href="#">об аукционе</a></li>
+              <li class="first-item link-active"><a href="#">главная</a></li>
+              <li class="item"><a href="#">посмотреть лоты</a></li>
+              <li class="item"><a href="#">об аукционе</a></li>
           </ul>
       </nav>
-      <a href="#" class="logo"><img src="./images/logo.svg" alt="лого страницы"></a>
+      <a class="logo"><img src="./images/logo.svg" alt="лого страницы"></a>
       <address class="address">
         <a href="tel:+9999555555">+9 999 555 555</a>
         <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
@@ -30,13 +30,13 @@
         <div class="overlay"></div>
         <div class="content">
           <h1 class="title">
-              <span class="first-line">ОНО</span>
-              <span class="second-line">ТЕБЕ</span>
-              <span class="third-line">НАДО</span>
+              <span class="ono-line">оно</span>
+              <span class="tebe-line">тебе</span>
+              <span class="nado-line">надо</span>
           </h1>
           <div class="description">
             <p class="description-text">Аукцион вещей, в которые никто не верил</p>
-            <button class="act-button">СДЕЛАТЬ СТАВКУ</button>
+            <button class="act-button">сделать ставку</button>
           </div>
         </div>
       </section>
@@ -76,17 +76,17 @@
       </section>
       <section  class="about">
         <div class="logo_bottom">
-          <img src="./images/logo-white.svg" alt="logo" style="width: auto; max-width: 146px; height: auto;">
+          <img src="./images/logo-white.svg" alt="логотип" class="logo-bottom">
           
         </div>
-        <div class="text-container">
+        <article class="text-container">
           <h2 class="about-head">об аукционе </h2>
           <div class="description_text">
             <p>Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата. Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен дневник девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи, созданные любителями?</p>
-            <p class="shift-down">Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками. Непринятые и непонятые. Когда-то они казались просто неудачными. Но, несмотря
+            <p>Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками. Непринятые и непонятые. Когда-то они казались просто неудачными. Но, несмотря
   на критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно представить современную культуру. Когда в эти вещи не верил никто, продолжали верить их создатели. И сейчас эти лоты стали культовыми. </p>
             </div>
-          </div>
+          </article>
       </section>
     </main>
     <footer class="footer">
@@ -97,16 +97,16 @@
       </address>
       <nav class="menu_bottom">
         <ul>
-          <li><a href="#">главная</a></li>
-          <li><a href="#">посмотреть лоты</a></li>
-          <li><a href="#">об аукционе</a></li>
+          <li class="first-item link-active"><a href="#">главная</a></li>
+          <li class="item"><a href="#">посмотреть лоты</a></li>
+          <li class="item"><a href="#">об аукционе</a></li>
         </ul>
       </nav>
-      <div class="social">
-        <img src="./images/yt.svg" alt="facebook" class="socials_svg">
-        <img src="./images/vk.svg" alt="instagram">
-        <img src="./images/pinterest.svg" alt="pinterest">
-      </div>
+      <ul class="social">
+        <li><a href="#"><img src="./images/yt.svg" alt="facebook" class="social_svg"></a></li>
+        <li><a href="#"><img src="./images/vk.svg" alt="instagram" class="social_svg"></a></li>
+        <li><a href="#"><img src="./images/pinterest.svg" alt="pinterest" class="social_svg"></a></li>
+      </ul>
       
     </footer>
   </body>
