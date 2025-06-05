@@ -38,7 +38,7 @@
     border: 1px solid black; /* Черная граница */
 }
 
-.first-item a {
+.link-active a {
   text-decoration: none; /* Убираем подчеркивание у первого элемента */
 }
 
@@ -66,11 +66,11 @@
     flex-direction: column;
     max-width: 240px;
     flex-wrap: wrap;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 24.3px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     font-style: normal;
 }
 
@@ -87,8 +87,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: end;
+
     align-items: center;
     color: white;
     text-align: center;
@@ -96,6 +95,7 @@
     min-height: 757px;
     margin-bottom: 50px;
     margin-top: 95px;
+    
 }
 
 /* Полупрозрачный слой (overlay) */
@@ -117,11 +117,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 50px; /* Отступ между заголовком и описанием */
-
-  background-image: url('background.jpg'); /* Предполагаемый фон */
-  background-size: cover;
-  background-position: center;
+    gap: 100px;
 }
 
 /* Блок с заголовком */
@@ -139,33 +135,36 @@
     /* padding: 133px 20px 10px 18px; Внутренние отступы */
     /* margin-top: -50px; Поднимаем заголовок на 50 пикселей */
     text-align: center; /* По умолчанию все строки по центру */
-    gap: 20px;
+    padding-top: 170px;
 }
 
-.ono-line {
+.letters-left {
     text-align: left; /* Левое выравнивание первой строки */
     padding-left: 45px;
 
 }
 
-.tebe-line {
+.letters-center {
     text-align: center; /* Центральное выравнивание второй строки */
     margin-top: 30px;
+    margin-left: 20px;
 }
 
-.nado-line {
+.letters-right {
     text-align: right; /* Правое выравнивание третьей строки */
     padding-right: 20px;
 }
 
 /* Блок с описанием и кнопкой */
 .description {
-  display: flex;
-  justify-content: space-between; /* Размещает элементы по краям */
-  align-items: center; /* Выравнивает элементы по вертикали */
-  width: 100%; /* Занимает всю доступную ширину */
-  max-width: 1000px; /* Максимальная ширина */
-  margin-top: 100px; /* Увеличиваем отступ сверху */
+    display: flex;
+    justify-content: space-between; /* Размещает элементы по краям */
+    align-items: center; /* Выравнивает элементы по вертикали */
+    width: 100%; /* Занимает всю доступную ширину */
+    padding-left: 50px;
+    padding-right: 50px;
+    /* max-width: 1000px; Максимальная ширина */
+    margin-top: 10px; /* Увеличиваем отступ сверху */
 }
 
 .description-text {
@@ -176,14 +175,13 @@
   word-spacing: 1.3em;
   text-transform: uppercase;
   max-width: 660px;
-  margin-top: -20px;
 }
 
 .act-button {
   padding: 10px 20px;
   font-family: Raleway, sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 22px;
   color: white;
   line-height: 100%;
   text-align: center;
@@ -247,15 +245,15 @@
     list-style: none; /* Убираем маркеры списка */
 }
 
-.card1 {
+.card-film {
     background-image: url('../images/card-lot-01.jpg');
 }
 
-.card2 {
+.card-book {
     background-image: url('../images/card-lot-02.jpg');
 }
 
-.card3 {
+.card-picture {
     background-image: url('../images/card-lot-03.jpg');
 }
 article {
@@ -267,7 +265,7 @@ article {
     background-position: center;
     background-repeat: no-repeat;
     width: 334px; /* Соответствует flex-basis */
-    min-height: 596px; /* Высота карточки */
+    height: 596px; /* Высота карточки */
 }
 
 .card-head {
@@ -282,8 +280,8 @@ article {
     color: #FFFFFF;
     position: relative;
     width: 254px; /* Соответствует flex-basis */
-    top: 48px; /* Отступ от края карточки */
-    left: 40px; /* Отступ от края карточки */
+    margin-top: 48px; /* Отступ от края карточки */
+    margin-left: 40px; /* Отступ от края карточки */
     z-index: 2;
 }
 
@@ -319,7 +317,6 @@ article {
     margin-top: 72px;
     margin-left: 24px;
     position: relative; /* Относительное позиционирование */
-    min-height: 595px;
     max-width: 1100px;
     display: flex;
     justify-content: space-between;
@@ -341,13 +338,12 @@ article {
 
 .text-container {
     position: relative;
-    top: 130px;
+    margin-top: 130px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Выравниваем по верхней границе */
     align-items: start;
     width: 693px;
-    min-height: 449px;
     margin-left: 60px;
 }
 
@@ -365,15 +361,13 @@ article {
     display: flex;
     margin-top: 102px;
     margin-left: -25px;
-    height: 312px;
     width: 690px;
     flex-direction: column;
     justify-content: space-between;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    letter-spacing: 0%;
     gap: 20px;
 }
 
@@ -384,50 +378,33 @@ article {
 .footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
+    padding-bottom: 100px;
 }
 
 .address-bottom {
     margin-left: 50px;
-    margin-top: 130px;
     max-width: 300px;
     letter-spacing: 0.01em;
     font-style: normal;
 }
 .menu_bottom {
     display: flex;
-    margin-top: 75px;
-    margin-left: -40px;
+    margin-left: -60px;
+    margin-top: -5px;
     flex-direction: column; /* Вертикальное расположение */
     justify-content: space-between; /* Выравнивание по вертикали */
     align-items: center; /* Выравнивание по горизонтали */
     width: 164px;
-    min-height: 48px;
 }
 
 .menu_bottom ul {
     list-style: none; /* Убираем маркеры списка */
-    padding: 0;
-    margin: 0;
     text-align: center; /* Выравнивание текста по центру */
-    margin-top: 20px;
 }
 
 .menu_bottom li {
     position: relative; /* Для добавления линий */
     margin: 5px 0; /* Отступ между элементами */
-}
-
-.menu_bottom li::after {
-    content: ""; /* Создаём псевдоэлемент */
-    position: absolute;
-    bottom: -5px; /* Позиционируем линию под текстом */
-    left: 50%; /* Центрируем линию */
-    transform: translateX(-50%); /* Корректируем положение линии */
-    width: 80%; /* Ширина линии */
-    height: 1px; /* Толщина линии */
-    background-color: #ccc; /* Цвет линии */
 }
 
 .menu_bottom a {
@@ -448,12 +425,8 @@ text-align: center;
     display: flex;
     justify-content: space-between;
     position: relative;
-    align-items: center;
     margin-right: 50px;
-    margin-top: 80px;
     min-width: 240px;
-    max-height: 48px;
-    min-height: 48px;
     list-style: none;
 }
 
