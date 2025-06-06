@@ -132,27 +132,31 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     width: 1100px; /* Ширина контейнера */
-    /* padding: 133px 20px 10px 18px; Внутренние отступы */
-    /* margin-top: -50px; Поднимаем заголовок на 50 пикселей */
     text-align: center; /* По умолчанию все строки по центру */
     padding-top: 170px;
 }
 
+.text-line {
+    height: 115px;
+}
+
 .letters-left {
     text-align: left; /* Левое выравнивание первой строки */
-    padding-left: 45px;
+    padding-left: 50px;
+    margin-top: -3px;
 
 }
 
 .letters-center {
     text-align: center; /* Центральное выравнивание второй строки */
-    margin-top: 30px;
-    margin-left: 20px;
+    margin-top: 18px;
+    margin-left: 28px;
 }
 
 .letters-right {
     text-align: right; /* Правое выравнивание третьей строки */
     padding-right: 20px;
+    padding-top: 20px;
 }
 
 /* Блок с описанием и кнопкой */
@@ -163,8 +167,7 @@
     width: 100%; /* Занимает всю доступную ширину */
     padding-left: 50px;
     padding-right: 50px;
-    /* max-width: 1000px; Максимальная ширина */
-    margin-top: 10px; /* Увеличиваем отступ сверху */
+    margin-top: 25px; /* Увеличиваем отступ сверху */
 }
 
 .description-text {
@@ -256,7 +259,7 @@
 .card-picture {
     background-image: url('../images/card-lot-03.jpg');
 }
-article {
+.article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -265,7 +268,7 @@ article {
     background-position: center;
     background-repeat: no-repeat;
     width: 334px; /* Соответствует flex-basis */
-    height: 596px; /* Высота карточки */
+    min-height: 596px; /* Высота карточки */
 }
 
 .card-head {
@@ -293,9 +296,9 @@ article {
     line-height: 133%;
     letter-spacing: 0.06em;
     color: #FFFFFF;
-    bottom: 48px; /* Отступ от края карточки */
+    margin-bottom: 48px; /* Отступ от края карточки */
     width: 254px; /* Соответствует flex-basis */
-    left: 40px; /* Отступ от края карточки */
+    margin-left: 40px; /* Отступ от края карточки */
     display: flex;
     justify-content: flex-end;
     z-index: 2;
@@ -376,9 +379,10 @@ article {
 }
 
 .footer {
+    margin-top: 135px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 
 .address-bottom {
