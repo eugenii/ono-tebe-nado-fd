@@ -137,7 +137,7 @@
 }
 
 .text-line {
-    height: 115px;
+    line-height: 115px;
 }
 
 .letters-left {
@@ -167,7 +167,7 @@
     width: 100%; /* Занимает всю доступную ширину */
     padding-left: 50px;
     padding-right: 50px;
-    margin-top: 25px; /* Увеличиваем отступ сверху */
+    margin-top: 5px; /* Увеличиваем отступ сверху */
 }
 
 .description-text {
